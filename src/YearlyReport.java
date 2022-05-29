@@ -36,7 +36,8 @@ public class YearlyReport {
             YearlyReportRecord yearlyReportRecord = new YearlyReportRecord(month, amount, isExpense);
             yearData.add(yearlyReportRecord);
         }
-
-        System.out.println("Данные годового отчета сохранены");
+        System.out.println("Данные годового отчета сохранены.");
     }
 }
+
+

@@ -21,7 +21,7 @@ public class MonthlyReport {
             this.sumOfOne = sumOfOne;
         }
     }
-    public void monthReading() {
+    public void monthlyReading() {
             FileReader fileReader = new FileReader();
             for (int month = 1; month <= 3; month++) {
                 ArrayList<MonthlyReportRecord> record = new ArrayList<>();
@@ -44,28 +44,7 @@ public class MonthlyReport {
                 }
                 monthData.put(month, record);
             }
-            System.out.println("Данные месячных отчетов сохранены");
-    }
-    void statisticPrint(){
-        String maxItemName = "";
-        int maxKey;
-        int maxProfit = 0;
-        for (int month : monthData.keySet()) {
-            ArrayList<MonthlyReportRecord> listMonth = monthData.get(month);
-            for (int i = 0; i < listMonth.size(); i++) {
-            }
-        }
-    }
-    public String monthName(int monthId) {
-        String nameOfMonth = "";
-        if (monthId == 1) {
-            nameOfMonth = "январь";
-        } else if (monthId == 2) {
-            nameOfMonth = "февраль";
-        } else if (monthId == 3) {
-            nameOfMonth = "март";
-        }
-        return nameOfMonth;
+            System.out.println("Данные месячных отчетов сохранены.");
     }
 }
 
