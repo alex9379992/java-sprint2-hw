@@ -33,7 +33,7 @@ public class MonthlyReport {
                 String content = fileReader.readFileContentsOrNull("resources/m.20210" + month + ".csv");
                 String[] lines = content.split("\n");
                 for (int i = 1; i < lines.length; i++) {
-                    String line = lines[i];
+                    String line = lines[i].trim();
                     String[] lineContents = line.split(",");
                     itemName = lineContents[0];
                     isExpense = Boolean.parseBoolean(lineContents[1]);
