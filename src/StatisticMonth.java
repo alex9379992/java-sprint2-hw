@@ -19,19 +19,19 @@ public class StatisticMonth {
             String nameProfit = "";
             String nameExpense = "";
             int maxProfit = 0;
-            int profit = 0;
             int maxExpense = 0;
-            int expense = 0;
             listMonth = monthData.get(month);
             for (int i = 0; i < listMonth.size(); i++) {
                 MonthlyReport.MonthlyReportRecord record = listMonth.get(i);
-                if (record.isExpense == false){
+                if (!record.isExpense){
+                    int profit = 0;
                     profit = record.quantity * record.sumOfOne;
                     if(profit > maxProfit){
                         maxProfit = profit;
                         nameProfit = record.itemName;
                     }
                 } else {
+                    int expense = 0;
                     expense = record.quantity * record.sumOfOne;
                     if(expense > maxExpense){
                         maxExpense = expense;
