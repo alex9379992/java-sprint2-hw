@@ -19,27 +19,11 @@ public class Main {
             } else if (command == 2) {
                 yearlyReport.yearlyReading();
             } else if (command == 3) {
-                if(monthlyReport.monthData.size() == 0 && yearlyReport.yearData.size() == 0){
-                    System.out.println("Ошибка: годовой и месячные отчеты не загружены.");
-                } else {
-                    dataReconciliation.calculatingMonthlySum(monthlyReport.monthData);
-                    dataReconciliation.calculatingYearly(yearlyReport.yearData);
-                    dataReconciliation.reconciliation();
-                }
+               dataReconciliation.callingMethods(monthlyReport.monthData, yearlyReport.yearData);
             } else if (command == 4) {
-                if(monthlyReport.monthData.size() == 0){
-                    System.out.println("Ошибка: месячные отчеты не загружены.");
-                } else {
-                    statisticMonth.statisticPrint(monthlyReport.monthData);
-                }
+                    statisticMonth.callingMethods(monthlyReport.monthData);
             } else if (command == 5) {
-                if(yearlyReport.yearData.size() == 0){
-                    System.out.println("Ошибка: годовой отчет не загружен.");
-                } else {
-                    statisticYear.printNameYear();
-                    statisticYear.printProfit(yearlyReport.yearData);
-                    statisticYear.printAverageIncomeAndExpense(statisticYear.dataIncome, statisticYear.dataExpense);
-                }
+                statisticYear.callingMethods(yearlyReport.yearData);
             } else if (command == 0) {
                 System.out.println("Выход.");
                 break;

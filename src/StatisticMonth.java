@@ -2,6 +2,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StatisticMonth {
+    public void callingMethods(HashMap<Integer, ArrayList<MonthlyReport.MonthlyReportRecord>> monthData) {
+        if (monthData.size() == 0) {
+            System.out.println("Ошибка: месячные отчеты не загружены.");
+        } else {
+            statisticPrint(monthData);
+        }
+    }
 
     void statisticPrint(HashMap<Integer, ArrayList<MonthlyReport.MonthlyReportRecord>> monthData){
 

@@ -6,6 +6,16 @@ public class StatisticYear {
     HashMap<Integer, Integer> dataExpense = new HashMap<>();
     StatisticMonth statisticMonth = new StatisticMonth();
 
+    public void callingMethods(ArrayList<YearlyReport.YearlyReportRecord> yearData) {
+        if(yearData.size() == 0){
+            System.out.println("Ошибка: годовой отчет не загружен.");
+        } else {
+            printNameYear();
+            printProfit(yearData);
+            printAverageIncomeAndExpense(dataIncome, dataExpense);
+        }
+    }
+
     public void printNameYear() {
         final int nameYear = 2021;
         System.out.println("Статистика за " + nameYear + " год:");

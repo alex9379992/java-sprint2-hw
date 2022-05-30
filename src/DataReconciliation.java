@@ -8,6 +8,17 @@ public class DataReconciliation {
     HashMap<Integer, Integer> sumProfitYear;
     HashMap<Integer, Integer> sumExpenseYear;
 
+    public void callingMethods(HashMap<Integer, ArrayList<MonthlyReport.MonthlyReportRecord>> monthData,
+                               ArrayList<YearlyReport.YearlyReportRecord> yearData){
+        if(monthData.size() == 0 && yearData.size() == 0){
+            System.out.println("Ошибка: годовой и месячные отчеты не загружены.");
+        } else {
+            calculatingMonthlySum(monthData);
+            calculatingYearly(yearData);
+            reconciliation();
+        }
+    }
+
     public void calculatingMonthlySum(HashMap<Integer, ArrayList<MonthlyReport.MonthlyReportRecord>> monthData) {
 
         sumProfitMonth = new HashMap<>();
