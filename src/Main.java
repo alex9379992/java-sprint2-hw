@@ -47,7 +47,6 @@ public class Main {
                 System.out.println("Извините, такой команды пока нет.");
             }
         }
-
     }
 
     public static void printMenu() {

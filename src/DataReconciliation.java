@@ -20,7 +20,7 @@ public class DataReconciliation {
             listMonth = monthData.get(month);
             for (int i = 0; i < listMonth.size(); i++) {
                 MonthlyReport.MonthlyReportRecord record = listMonth.get(i);
-                if (record.isExpense == false) {
+                if ( !record.isExpense) {
                     sumProfit += record.quantity * record.sumOfOne;
                 } else {
                     sumExpense += record.quantity * record.sumOfOne;
@@ -60,7 +60,7 @@ public class DataReconciliation {
                      statisticMonth.monthName(month) + " несоответствуют расходы.");
              }
         }
-        if(incongruity == false){
+        if(!incongruity){
             System.out.println("Несоответсвий не обнаружено");
         }
     }
