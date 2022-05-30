@@ -28,7 +28,7 @@ public class YearlyReport {
         String content = fileReader.readFileContentsOrNull("resources/y.2021.csv");
         String[] lines = content.split("\n");
         for (int i = 1; i < lines.length; i++) {
-            String line = lines[i];
+            String line = lines[i].trim();
             String[] lineContents = line.split(",");
             month = Integer.parseInt(lineContents[0]);
             amount = Integer.parseInt(lineContents[1]);
